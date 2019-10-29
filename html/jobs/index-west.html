@@ -25,39 +25,10 @@
     <link href="css/fontawesome-all.css" rel="stylesheet">
     <link href="css/swiper.css" rel="stylesheet">
 	<link href="css/magnific-popup.css" rel="stylesheet">
-	<link href="css/styles-east.css" rel="stylesheet">
+	<link href="css/styles-west.css" rel="stylesheet">
 
 	<!-- Favicon  -->
     <link rel="icon" href="images/favicon.png">
-
-
-    <script>
-        function getCookie(cname) {
-          var name = cname + "=";
-          var ca = document.cookie.split(';');
-          for(var i = 0; i < ca.length; i++) {
-            var c = ca[i];
-            while (c.charAt(0) == ' ') {
-              c = c.substring(1);
-            }
-            if (c.indexOf(name) == 0) {
-              return c.substring(name.length, c.length);
-            }
-          }
-          return "";
-        }
-
-        if (getCookie('auth_scope')){
-            const _auth_scope = JSON.parse(getCookie('auth_scope'));
-            var _navUser = document.getElementsByName('navUser')[0];
-            _navUser.childNodes[1].innerText = "Welcome: " + _auth_scope.firstName + " " + _auth_scope.lastName;
-            _navUser.style.display="block"
-            document.getElementsByName('navLogout')[0].style.display="block"
-
-        }
-
-
-    </script>
 </head>
 <body data-spy="scroll" data-target=".fixed-top"><a href="body" class="back-to-top page-scroll" style="display: none;">Back to Top</a>
 
@@ -90,14 +61,11 @@
 
             <div class="collapse navbar-collapse" id="navbarsExampleDefault">
                 <ul class="navbar-nav ml-auto">
-                    <li class="nav-item" name="navUser" style="display: none;">
-                        <span class="nav-link page-scroll"></span>
-                    </li>
                     <li class="nav-item">
                         <a class="nav-link page-scroll active" href="">HOME <span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link page-scroll" href="./jobs">JOBS</a>
+                        <a class="nav-link page-scroll" href="">JOBS</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link page-scroll" href="">SERVICES</a>
@@ -122,9 +90,6 @@
                     <li class="nav-item">
                         <a class="nav-link page-scroll" href="">CONTACT</a>
                     </li>
-                    <li class="nav-item" name="navLogout" style="display: none;">
-                        <a class="nav-link page-scroll" href="./logout">LOGOUT</a>
-                    </li>
                 </ul>
                 <span class="nav-item">
                     <a class="btn-outline-sm" href=""><i class="fas fa-mobile-alt"></i>+206 272 5555</a>
@@ -148,7 +113,7 @@
                         <div class="text-container">
                             <h1 class="h1-large">We've Got Jobs For <span id="js-rotating">Designers, Developers, Marketers, Managers</span></h1>
                             <p class="p-large p-heading">Feeling that it's time for change in your career path? Check out our job listing and find your new challenge</p>
-                            <a class="btn-solid-lg page-scroll" href="./jobs">GET HIRED</a>
+                            <a class="btn-solid-lg page-scroll" href="">GET HIRED</a>
                         </div>
                     </div> <!-- end of col -->
                 </div> <!-- end of row -->
