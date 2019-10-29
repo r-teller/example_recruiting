@@ -46,17 +46,6 @@
           }
           return "";
         }
-
-        if (getCookie('auth_scope')){
-            const _auth_scope = JSON.parse(getCookie('auth_scope'));
-            var _navUser = document.getElementsByName('navUser')[0];
-            _navUser.childNodes[1].innerText = "Welcome: " + _auth_scope.firstName + " " + _auth_scope.lastName;
-            _navUser.style.display="block"
-            document.getElementsByName('navLogout')[0].style.display="block"
-
-        }
-
-
     </script>
 </head>
 <body data-spy="scroll" data-target=".fixed-top"><a href="body" class="back-to-top page-scroll" style="display: none;">Back to Top</a>
@@ -170,4 +159,14 @@
     <script src="js/validator.js"></script> <!-- Validator.js - Bootstrap plugin that validates forms -->
     <script src="js/scripts.js"></script> <!-- Custom scripts -->
 
+    <script>
+        if (getCookie('auth_scope')){
+            const _auth_scope = JSON.parse(getCookie('auth_scope'));
+            var _navUser = document.getElementsByName('navUser')[0];
+            _navUser.childNodes[1].innerText = "Welcome: " + _auth_scope.firstName + " " + _auth_scope.lastName;
+            _navUser.style.display="block"
+            document.getElementsByName('navLogout')[0].style.display="block"
+        }
+    </script>
+    
 </body></html>
