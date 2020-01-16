@@ -1,11 +1,9 @@
 FROM nginx
 RUN apt-get update
-RUN apt-get install --no-upgrade git -y
+RUN apt-get install --no-upgrade curl vim -y
+RUN apt-get clean
 
-RUN mkdir  -p /var/www
-    # && git clone https://github.com/r-teller/example_recruiting.git /var/git/example_recruiting \
-    # && cp -r /var/git/example_recruiting/html /var/www \
-    # && cp -r /var/git/example_recruiting/nginx/nginx.conf /etc/nginx/nginx.conf
+RUN mkdir  -p /var/www/html
 
-COPY /html/ /var/www/
+COPY /html/ /var/www/html
 COPY /nginx/nginx-east.conf /etc/nginx/nginx.conf
