@@ -1,4 +1,6 @@
 FROM nginx
+ENV DEBIAN_FRONTEND=noninteractive
+
 RUN apt-get update
 RUN apt-get install --no-upgrade curl vim -y
 RUN apt-get clean
