@@ -1,4 +1,5 @@
 FROM nginx
+RUN apt-get update
 RUN apt-get install --no-upgrade curl vim -y
 RUN apt-get clean
 
